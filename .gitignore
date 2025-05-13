@@ -1,0 +1,17 @@
+# Ignore environment configuration
+.env
+
+# Ignore token and player ID files
+token.txt
+player_id.txt
+
+# Ignore compiled binaries
+*.exe
+*.out
+*.o
+
+# Ignore Go module files
+go.sum
+
+# Ignore build artifacts
+build/
