@@ -30,9 +30,13 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-go-
 
+      # Download dependencies and update go.sum
+      - name: Download dependencies
+        run: go mod tidy && go mod download
+
       # Build the project
       - name: Build binary
-        run: go build . -o darkThroneAutomate
+        run: go build -o darkThroneAutomate .
 
       # Upload the binary as an artifact
       - name: Upload artifact
