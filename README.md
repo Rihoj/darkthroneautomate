@@ -32,9 +32,11 @@ Dark Throne Automate is a project designed to automate tasks for the Dark Throne
 1. Configure the `.env` file with necessary parameters (e.g., API keys, thresholds).
 2. Run the executable with the required arguments:
    ```bash
-   ./darkThroneAutomate <should_attack> <gold_threshold>
+   ./darkThroneAutomate <should_attack> <start_page> <end_page> <gold_threshold>
    ```
    - `should_attack`: Set to `true` to enable attacks, or `false` to only evaluate targets.
+   - `start_page`: the starting pagination page
+   - `end_page`: the ending pagination page
    - `gold_threshold`: Minimum gold amount to consider a target.
 
 ## Contributing
