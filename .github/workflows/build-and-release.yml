@@ -32,7 +32,7 @@ jobs:
 
       # Build the project
       - name: Build binary
-        run: go build -o darkThroneAutomate
+        run: go build . -o darkThroneAutomate
 
       # Upload the binary as an artifact
       - name: Upload artifact
