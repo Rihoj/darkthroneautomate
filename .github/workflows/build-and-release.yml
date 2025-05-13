@@ -38,6 +38,10 @@ jobs:
       - name: Build binary
         run: go build -o darkThroneAutomate .
 
+      # Verify the binary exists
+      - name: Verify binary
+        run: ls -l darkThroneAutomate
+
       # Upload the binary as an artifact
       - name: Upload artifact
         uses: actions/upload-artifact@v4
@@ -54,6 +58,12 @@ jobs:
       # Checkout the repository
       - name: Checkout code
         uses: actions/checkout@v4
+
+      # Download the artifact
+      - name: Download artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: darkThroneAutomate
 
       # Create a GitHub release
       - name: Create GitHub Release
